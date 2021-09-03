@@ -8,5 +8,9 @@ int main() {
     compte.retrait(10.11);
     compte.afficherSolde();
     cout<<compte.getSolde();
+    Compte c1=Compte(36024);
+    compte.virer(20,c1);
+    compte.afficherSolde();
+    c1.afficherSolde();
     return 0;
 }

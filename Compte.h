@@ -17,6 +17,7 @@ public:
     void retrait(float valeur);
     float getSolde();
     void afficherSolde();
+    void virer(float valeur,Compte &destinataire);
 
 };
 

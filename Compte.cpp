@@ -27,3 +27,9 @@ float Compte::getSolde() {
 void Compte::afficherSolde() {
     cout<<"Le solde du compte numéro "<<numero<<" est de "<<fixed<<setprecision(2)<<solde<<endl;
 }
+
+void Compte::virer(float valeur, Compte &destinataire) {
+    retrait(valeur); //retrait du compte en cours
+    destinataire.depot(valeur); // dépôt sur le compte destinataire
+
+}
