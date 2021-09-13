@@ -9,7 +9,12 @@ string Client::getNom() {
 }
 
 float Client::getSolde(int numero)  {
-    return comptes[numero].getSolde();
+    int somme=0;
+    for(int i=0;i<nbcomptes;i++)
+    {
+        somme+=comptes[i].getSolde();
+    }
+    return somme;
 }
 
 void Client::afficherSolde(int numero) {
