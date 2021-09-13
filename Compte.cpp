@@ -29,7 +29,7 @@ void Compte::afficherSolde() {
 }
 
 void Compte::virer(float valeur, Compte &destinataire) {
-    retrait(valeur); //retrait du compte en cours
+    retrait(valeur); //retrait du compte en cours d'utilisation
     destinataire.depot(valeur); // dépôt sur le compte destinataire
 
 }

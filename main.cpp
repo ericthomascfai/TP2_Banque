@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Compte.h"
+#include "Client.h"
+
 using namespace std;
 int main() {
     Compte compte=Compte(21);
@@ -12,5 +14,10 @@ int main() {
     compte.virer(20,c1);
     compte.afficherSolde();
     c1.afficherSolde();
+    /*************************code de test de la classe client******************/
+    Client client=Client("Jean",1);
+    client.afficherSolde();
+    cout<<client.getSolde()<<endl;
+    cout<<client.getNom()<<endl;
     return 0;
 }
