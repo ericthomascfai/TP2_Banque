@@ -10,9 +10,9 @@ string Client::getNom() {
 
 float Client::getSolde(int numero)  {
     int somme=0;
-    for(int i=0;i<nbcomptes;i++)
+    for(Compte c:comptes)
     {
-        somme+=comptes[i].getSolde();
+        somme+=c.getSolde();
     }
     return somme;
 }
