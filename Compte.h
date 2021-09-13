@@ -12,10 +12,11 @@ private:
     float solde;
 
 public:
+    Compte();
     Compte(int numero);
     void depot(float valeur);
     void retrait(float valeur);
-    float getSolde();
+    float getSolde() ;
     void afficherSolde();
     void virer(float valeur,Compte &destinataire);
 

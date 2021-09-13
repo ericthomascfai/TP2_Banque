@@ -33,3 +33,7 @@ void Compte::virer(float valeur, Compte &destinataire) {
     destinataire.depot(valeur); // dépôt sur le compte destinataire
 
 }
+
+Compte::Compte() {
+
+}
