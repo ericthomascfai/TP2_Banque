@@ -16,6 +16,7 @@ private:
     string nom;
     int nbcomptes;
 public:
+    Client();
     Client(string nom);
     string getNom();
     float getSolde(int numero);

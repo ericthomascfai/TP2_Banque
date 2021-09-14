@@ -34,3 +34,7 @@ nbcomptes++; //on passe à la case suivante
 Compte *Client::getComptes() {
     return comptes;
 }
+
+Client::Client() {
+
+}
