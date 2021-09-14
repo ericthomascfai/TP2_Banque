@@ -9,6 +9,7 @@
 using namespace std;
 Compte::Compte(int numero) {
     this->numero=numero;
+    solde=0;
 
 }
 

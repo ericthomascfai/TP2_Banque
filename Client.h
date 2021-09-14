@@ -23,7 +23,9 @@ public:
     void afficherSolde(int numero);
     void ajouterCompte();
 
-    Compte *getComptes();
+    int getNbcomptes() const;
+
+    Compte* getComptes();
 };
 
 

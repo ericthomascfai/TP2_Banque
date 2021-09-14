@@ -2,6 +2,7 @@
 // Created by eric on 13/09/2021.
 //
 
+#include <iostream>
 #include "Client.h"
 
 string Client::getNom() {
@@ -18,6 +19,7 @@ float Client::getSolde(int numero)  {
 }
 
 void Client::afficherSolde(int numero) {
+    cout<<"Client "<<nom<<" ";
     comptes[numero].afficherSolde();
 }
 
@@ -37,4 +39,8 @@ Compte *Client::getComptes() {
 
 Client::Client() {
 
+}
+
+int Client::getNbcomptes() const {
+    return nbcomptes;
 }

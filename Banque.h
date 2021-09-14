@@ -19,6 +19,7 @@ public:
     void bilanClient(int numero);
     void afficherBilan();
 
+    Client *getClients() ;
 };
 
 
