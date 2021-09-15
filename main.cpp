@@ -25,7 +25,8 @@ int main() {
     cout<<client.getNom()<<endl;*/
     /***********************code de test de la classe banque***********************/
     Banque banque=Banque();
-    banque.ajouterClient("Paul");
+    banque.interaction();
+    /*banque.ajouterClient("Paul");
     banque.getClients()[0].ajouterCompte();
     banque.getClients()[0].getComptes()[0].depot(100);
     banque.getClients()[0].ajouterCompte();
@@ -34,6 +35,7 @@ int main() {
     banque.ajouterClient("Bigshow");
     banque.getClients()[1].ajouterCompte();
     banque.getClients()[1].getComptes()[0].depot(100);
-    banque.afficherBilan();
+    banque.afficherBilan();*/
+
     return 0;
 }

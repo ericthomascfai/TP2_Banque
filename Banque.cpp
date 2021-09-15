@@ -30,7 +30,41 @@ void Banque::afficherBilan() {
 Banque::Banque() {
 
 }
+void Banque::interaction() {
+    int saisie=0;
+    cout<<"Quel opération voulez-vous effectuer?"<<endl;
+    cout<<"1-Ajouter un client"<<endl;
+    cout<<"2-Effectuer une opération sur un client"<<endl;
+    cout<<"3-Afficher un bilan général"<<endl;
+    cin>>saisie;
+    switch (saisie)
+    {
+        case 1:
+            ajouterClient(saisieClient());
+            break;
 
+        case 2:
+
+            break;
+
+        case 3:
+            afficherBilan();
+            break;
+
+
+
+    }
+
+    interaction(); //Recursivité
+}
+
+string Banque::saisieClient() {
+    cin.ignore(256, '\n'); //ignore les précédents cin pour le bon fonctionnement du getline
+    string saisie="";
+    cout<<"Veuillez saisir un nom\n";
+    getline(cin,saisie);
+    return saisie;
+}
 vector<Client> &Banque::getClients()  {
     return clients;
 }

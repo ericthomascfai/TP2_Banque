@@ -20,6 +20,9 @@ public:
     void afficherBilan();
     vector<Client> &getClients();
 
+    string saisieClient();
+
+    void interaction();
 };
 
 
