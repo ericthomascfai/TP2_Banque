@@ -5,21 +5,21 @@
 #ifndef TP2_BANQUE_BANQUE_H
 #define TP2_BANQUE_BANQUE_H
 
-
+using namespace std;
 #include "Client.h"
-
+#include <vector>
 class Banque {
 private:
-    Client clients[100];
-    int nbclients;
+    vector<Client> clients;
+
 
 public:
     Banque();
     void ajouterClient( const string &nomduclient);
     void bilanClient(int numero);
     void afficherBilan();
+    vector<Client> &getClients();
 
-    Client *getClients() ;
 };
 
 

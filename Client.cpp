@@ -23,24 +23,24 @@ void Client::afficherSolde(int numero) {
     comptes[numero].afficherSolde();
 }
 
-Client::Client(string nom): nom(nom),nbcomptes(0) {
+Client::Client(string nom): nom(nom) {
 //compte=Compte(numero);
 //this->nom=nom;
 }
 
 void Client::ajouterCompte() {
-comptes[nbcomptes]= Compte(nbcomptes); //remplissage du tableau à la case d'indice nbcomptes
-nbcomptes++; //on passe à la case suivante
+comptes.push_back(Compte(comptes.size())); //remplissage du tableau à la case d'indice nbcomptes
+
 }
 
-Compte *Client::getComptes() {
-    return comptes;
-}
+
 
 Client::Client() {
 
 }
 
-int Client::getNbcomptes() const {
-    return nbcomptes;
+
+
+ vector<Compte> &Client::getComptes()  {
+    return comptes;
 }

@@ -7,13 +7,13 @@
 #include "Banque.h"
 /*********************ajoute un client dans le tableau clients***********/
 void Banque::ajouterClient(const string &nomduclient) {
-    clients[nbclients]=Client(nomduclient);
-    nbclients++;
+    clients.push_back(Client(nomduclient));
+
 }
 /**************affiche le bilan d'un client******************************/
 void Banque::bilanClient(int numero) {
 
-    for(int i=0;i<clients[numero].getNbcomptes();i++) //pour i allant de 0 au nombre de comptes
+    for(int i=0;i<clients[numero].getComptes().size();i++) //pour i allant de 0 au nombre de comptes
     {
         clients[numero].afficherSolde(i); //on affiche le solde pour chaque comptes
     }
@@ -21,16 +21,18 @@ void Banque::bilanClient(int numero) {
 }
 /**************appel afficher bilan pour tous les clients****************/
 void Banque::afficherBilan() {
-    for(int i=0;i<nbclients;i++)
+    for(int i=0;i<clients.size();i++)
     {
         bilanClient(i);
     }
 }
 /***************************Constructeur*********************************/
-Banque::Banque():nbclients(0) {
+Banque::Banque() {
 
 }
 
- Client *Banque::getClients()  {
+vector<Client> &Banque::getClients()  {
     return clients;
 }
+
+

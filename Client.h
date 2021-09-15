@@ -9,12 +9,13 @@
 #include <string>
 #include "Compte.h"
 using namespace std;
+#include <vector>
 class Client {
 
 private:
-    Compte comptes[100];
+    vector<Compte> comptes;
     string nom;
-    int nbcomptes;
+
 public:
     Client();
     Client(string nom);
@@ -23,9 +24,9 @@ public:
     void afficherSolde(int numero);
     void ajouterCompte();
 
-    int getNbcomptes() const;
 
-    Compte* getComptes();
+
+    vector<Compte> &getComptes();
 };
 
 
