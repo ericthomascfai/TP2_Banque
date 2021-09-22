@@ -23,6 +23,12 @@ public:
     string saisieClient();
 
     void interaction();
+
+    float choixMontant();
+
+    int choix(string type, int limit);
+
+    void opclient(int numcli);
 };
 
 

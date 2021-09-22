@@ -30,7 +30,7 @@ Client::Client(string nom): nom(nom) {
 
 void Client::ajouterCompte() {
 comptes.push_back(Compte(comptes.size())); //remplissage du tableau à la case d'indice nbcomptes
-
+cout<<"Le compte n°"<<comptes.size()-1<<"a été ajouté"<<endl;
 }
 
 
